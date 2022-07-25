@@ -1,0 +1,955 @@
+:root
+{
+    /*De esta forma se escriben las variables*/
+    --red:#fa1616;
+    --black:#07031a;
+    --blue:#a6dcef;
+    --white:#ffffff;
+}
+
+/*Selector universal Esto es para modificar el formato de todo el HTML importante, poner el "*" */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body
+{
+    background-attachment: #ffff;
+    /*Con esto hacemos que no se vea el scroll del eje X*/
+    overflow-x: hidden;
+    font-family: 'Open Sans', sans-serif;
+
+}
+
+/** Go top  **/
+.go-top
+{
+    position: fixed;
+    bottom: 100px;
+    right: -100%;
+    width: 50px;
+    height: 50px;
+    border: 2px solid var(--red);
+    background: #fff;
+    z-index: 9999;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: 400ms;
+}
+
+.go-top:hover
+{
+    border: 2px solid var(--white);
+    background: var(--red);
+}
+
+.go-top:hover span
+{
+    color: var(--white);
+}
+
+/**La fecha es para decir especificamente a que quieres
+acceder **/
+.go-top > span
+{
+    font-size: 30px;
+    color: var(--back);
+}
+
+/*Menu de navegacion */
+
+/*Esto es para el id=header que teniamos en el index*/
+#header
+{
+    position: relative;
+    width: 100%;
+}
+
+.Subproductos1
+{
+    
+    margin-top: 0.5%;
+    display: block;
+    position: absolute;
+    background: teal;
+    width: 10%;
+    visibility: hidden;
+    opacity: 0;
+    transition: 1.5s;
+    border-radius: 10px;
+}
+
+.Subproductos1 li a
+{
+    padding: 15px;
+    display: block;
+    text-decoration: none;
+    
+}
+
+.lists1 li:hover .Subproductos1
+{
+    visibility: visible;
+    opacity: 1;
+}
+
+
+/*Clase menu*/
+.menu
+{
+    /*Posicion fija*/
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background: #fff;
+
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+    z-index: 9999;
+}
+
+
+.menu .logo-box
+{
+    margin-left: 20px;
+}
+
+.menu .logo-box h1 a
+{
+    /*Es para quitar el subrayado del titulo*/
+    text-decoration: none;
+    font-size: 35px;
+    font-weight: 400;
+    /*De esta forma se usan las variables en css*/
+    color: var(--back);
+}
+
+.list-container1
+{
+    margin-right: 20px;
+}
+
+/*Esta funcion en flex es la que hace que se vea el menu en una sola linea*/
+.list-container1 .lists1
+{
+    display: flex;
+}
+
+.list-container1 .lists1 li
+{
+    list-style: none;
+    margin-right: 50px;
+}
+
+.list-container1 .lists1 li a
+{
+    text-decoration: none;
+    /*Margen 0 en "Y" y 10 pixeles en "X"*/
+    margin: 50 px 50px;
+    padding: 8px;
+    color: snow;
+    border-radius: 24px;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+/*Efecto Hover*/      /*A los elementos a de la clase activo se les aplicara el estilo css*/
+.list-container1 .lists1 li a.activo
+{
+    background: steelblue;
+    color: #fff;
+}
+
+/*Aplicar efecto Hover*/
+.list-container1 .lists1 li a:hover
+{
+    /*Aqui escogemos el color del efecto hover*/
+    background: skyblue;
+    color: #fff;
+}
+
+/*Desaparece el icono de barras*/
+.bnt-menu > .fa-bars
+{
+    display: none;
+}
+
+/*IMG header, imagen de inicio o presentacion con efecto Parallax*/
+
+.img-header
+{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: url(img/header.jpg);
+    /*Con esto aparece el efecgto parallax*/
+    background-attachment: fixed;
+    /*Esto es para que aparezca en el centro*/
+    background-position: center;
+    /*Y esta funcion es para que la imagen se adapte*/
+    background-size: cover;
+}
+
+.img-header .Welcome
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /*Con esto se le da un degradado a la imagen*/
+    background: rgba(0, 0, 0, 0.6);
+
+    /*Para que este centrados todo lo que esta en la clase Welcome*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.img-header .Welcome h1
+{
+    font-size: 50px;
+    color: #fff;
+    font-weight: 200;
+}
+
+.img-header .Welcome hr
+{
+    width: 400px;
+    height: 2px;
+    background: #fff;
+    border: none;
+    border-top: 5px;
+}
+
+/*Esta es la configuracion para el enunciado de Agencia de diseño*/
+.img-header .Welcome p
+{
+    font-size: 20px;
+    color: #fff;
+    margin-top: 20px;
+}
+.img-header .Welcome > button
+{
+    /*Tamaño del boton hacia los lados*/
+    width: 170px;
+    /*Tamaño del boton hacia los arriba*/
+    height: 40px;
+    /*Color de alrededor de la palabra*/
+    background: var(--red);
+    /*El border radius es para saber que tan redondo queda el margen*/
+    border-radius: 24px;
+    border: none;
+    outline: none;
+    /*Tamaño de las letras*/
+    font-size: 20px;
+    /*Color de las letras*/
+    color: #fff;
+    text-align: center;
+    /*Separacion*/
+    margin-top: 20px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+/*Efecto Hover en el boton*/
+.img-header .Welcome > button:hover
+{
+    background: var(--blue);
+}
+
+/** Acerca de nosotros **/
+
+/*Clase principal*/
+.acerca-de
+{
+    width: 100%;
+    /*Esta es la separacion de lo que hay arriba*/
+    margin-top: 120px;
+}
+
+/*En esta parte es para darle formado a todo lo que este dentro de la clase 
+.info-container en este caso solo queremos 80% del espacio de la clase padre
+que es acerca-de*/
+.acerca-de .info-container
+{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.acerca-de .info-container h1
+{
+    /*Tamaño de la letra del titulo*/
+    font-size: 50px;
+    font-weight: 400;
+    /*Color de la letra*/
+    color: var(--black);
+    /*En que lugar ira el texto, centro, izquierda, derecha*/
+    text-align: center;
+
+    margin-bottom: 20px;
+}
+
+.acerca-de .info-container p
+{
+    text-align: justify;
+    /*tamaño de la letra*/
+    font-size: 17px;
+    color: var(--back);
+    /*medida de separacion por cada renglon*/
+    line-height: 35px;
+    /*10px Arriba abajo y 0 px a los lados*/
+    margin: 10px 0px;
+}
+
+/*En esta parte es para darle formado a todo lo que este dentro de la clase 
+.info-container .about-galery en este caso queremos 100% del espacio de la clase padre
+que es info-container*/
+
+.acerca-de .info-container .about-galery
+{
+    /*Lo que abarca hacia los lados del contenedor*/
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    /*El espacio de separacion o margen de arriba y abajo es de 50 px*/
+    margin: 50px 0px;
+}
+
+.acerca-de .info-container .about-galery img
+{
+    /*Con esta funcion es para poner las imagenes en una sola linea horizontal
+    de forma que tenemos que dividir la cantidad de imagenes con la cantidad de
+    espacio que disponemos, como disponemos del 100% de la clase padre galery en 
+    este caso dividimos 3/100 = 33.33 que ese es el espacio que tenemos que 
+    especificar*/
+
+    /** Nota: es importante restar lo que queremos de margen ya que el
+    prcentaje del 33.33% es el total del area, pero para poder poner el
+    margen debemos restar los pixeles de margen que queremos aplicar 
+    al porcentaje total deesta forma cubriremos toda el area asignada
+    junto con su margen para darle estilo**/
+
+    width: calc(33.33% - 10px);
+    /*Altura de las imagenes*/
+    height: 300px;
+    /*Esta funcion redimenciona las imagenes*/
+    object-fit: cover;
+    /*Margen de 10px arriba-abajo y 10 px a los lados*/
+    margin: 10px 10px;
+    /*Esto es para que se vean las esquinas redondas*/
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.acerca-de .info-container .about-more
+{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.acerca-de .info-container .about-more > button
+{
+    /*Tamaño del boton hacia los lados*/
+    width: 120px;
+    /*Tamaño del boton hacia los arriba*/
+    height: 40px;
+    /*Color de alrededor de la palabra*/
+    background: var(--red);
+    /*El border radius es para saber que tan redondo queda el margen*/
+    border-radius: 24px;
+    border: none;
+    outline: none;
+    /*Tamaño de las letras*/
+    font-size: 20px;
+    /*Color de las letras*/
+    color: #fff;
+    text-align: center;
+    /*Separacion*/
+    margin-top: 20px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.acerca-de .info-container .about-more > button:hover
+{
+    background: var(--blue);
+}
+
+.our-projects
+{
+    position: relative;
+    width: 100%;
+    height: 100%; 
+    background: url(img/Fondo-variedad-productos.jpg);
+    /**Efecto parallax**/
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    /*Cuando solo pones margin es el margen en general pero
+    margin-top: es el margen de arriba
+    margin-botton: es el margen de abajo
+    margin-left: es el margen de la izquieda
+    y margin right es el margen de la derecha*/
+    margin-top: 100px;
+}
+
+/**Metodo para hacer un degradado en la imagen**/
+.our-projects .deg-background
+{
+    /*Position absolute se sobre pone por ejemplo se sobre pondra
+    en la clase padre afecta a la clase padre y todo lo que se 
+    encuentra en el bloque de la clase padre con el absolute*/
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+
+}
+
+.our-projects .ejeZproject
+{
+    /**Como no queremos que una parte del bloque sea afectado por el
+    absolute usamos una clase la cual ponemos como posicion relative
+    la cual dejara de ser absoluto y pasara a ser relativo 
+    y de esa manera podremos modificar las clases hijas dejando
+    la configuracion de las clases padres**/
+    position: relative;
+    width: 100%;
+    height: 100%;
+
+}
+
+.our-projects .container-project
+{
+    width: 90%;
+    margin:auto ;
+    padding-top: 100px;
+}
+
+.our-projects .container-project .project-title
+{
+    /*El border , solid es para agregarle un margen*/
+    border: 2px solid #fff;
+    padding: 10px;
+    text-align: center;
+    width: 50%;
+    margin: auto;
+}
+
+.our-projects .container-project .project-title h2
+{
+    font-size: 40px;
+    color: #fff;
+    font-weight: normal;
+}
+
+.our-projects .container-project .project-title hr
+{
+    background: #fff;
+    width: 50%;
+    margin: 10px auto;
+}
+
+.our-projects .container-project .project-img
+{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    /*Con flex wrap se salta al siguiente renglon*/
+    flex-wrap: wrap;
+    margin-top: 80px;
+    padding-bottom: 100px;
+}
+
+.our-projects .container-project .project-img img
+{
+    width: calc(25% - 10px);
+    margin: 10px;
+    object-fit: cover;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+/**Testimonios**/
+
+.Testimonio
+{
+    width: 100%;
+    margin-top: 120px;
+
+}
+
+.Testimonio .testimonio-title
+{
+    width: 50%;
+    margin: auto;
+    text-align: center;
+}
+
+.Testimonio .testimonio-title h2
+{
+    font-size: 50px;
+    color: var(--black);
+    font-weight: normal;
+    margin-bottom: 10px;
+}
+
+.Testimonio .testimonio-title hr
+{
+    width: 60%;
+    margin: auto;
+    height: 2px;
+    background: var(--black);
+    border: none;
+}
+
+.Testimonio .box-testimonio
+{
+    width: 90%;
+    margin: 80px auto;
+
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+}
+
+.Testimonio .box-testimonio .card-testimonio
+{
+    width: 45%;
+    margin: 20px;
+
+}
+
+.Testimonio .box-testimonio .card-testimonio .card-img
+{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.Testimonio .box-testimonio .card-testimonio .card-img img
+{
+    width: 150px;
+    height: 150px;
+    border-radius: 150px;
+    object-fit: cover;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.Testimonio .box-testimonio .card-testimonio .testimonio-text
+{
+    width: 100%;
+    /*Esto es para aparecer un margen de color rojo*/
+    border: 2px solid var(--red);
+    /*padding es el espacio que le da por ejemplo al margen 
+    que esta al rededor del los textos como el de la parte de testimonios
+    que esta en rojo*/
+    padding: 20px;
+    border-radius: 20px;
+    /*Es para que aparezca la manita del mouse como si pudieras
+    seleccionar algo*/
+    cursor: pointer;
+    transition: 200ms;
+}
+
+.Testimonio .box-testimonio .card-testimonio .testimonio-text h4
+{
+    color: var(--red);
+    /*Esto es para quitarle el efecto de negritas a las palabras*/
+    font-weight: normal;
+    font-size: 27px;
+    /*Orientacion del titulo, centrado, izquierda o derecha*/
+    text-align: center;
+    margin-bottom: 20px;
+    transition: 200ms;
+}
+
+.Testimonio .box-testimonio .card-testimonio .testimonio-text p
+{
+    font-size: 19px;
+    color: var(--black);
+    text-align: justify;
+    /*separacion entre renglones*/
+    line-height: 35px;
+    transition: 200ms;
+}
+
+.Testimonio .box-testimonio .card-testimonio .testimonio-text:hover
+{
+    /*Se le añade efecto hover al marco del texto*/
+    border: 2px solid var(--blue);
+}
+
+.Testimonio .box-testimonio .card-testimonio .testimonio-text:hover h4
+{
+    /*asi mismo el efecto se añade al texto cuando lo pulsas*/
+    color: var(--blue);
+}
+
+/**Footer**/
+
+.footer
+{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    /*Efecto parallax*/
+    background: url(img/footer-1.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+}
+
+/*Degradado*/
+
+.footer .deg-footer
+{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.footer .ejeZfooter
+{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.footer .footer-content
+{
+    width: 100%;
+    padding-top: 100px;
+    margin: auto;
+}
+
+.footer .footer-content .footer-title
+{
+    width: 50%;
+    margin: auto;
+    /*Es lo ancho del margen de la oracion o texto*/
+    border: 2px solid #fff;
+    padding: 15px;
+}
+
+.footer .footer-content .footer-title h2
+{
+    text-align: center;
+    color: var(--white);
+    font-size: 50px;
+    font-weight: normal;
+    margin-bottom: 10px;
+}
+
+.footer .footer-content .footer-title hr
+{
+    width: 80%;
+    margin: auto;
+}
+
+.footer .footer-content .formulario-content
+{
+    width: 60%;
+    background: #fff;
+    border-radius: 24px;
+    border: 2px solid var(--red);
+    margin: 50px auto;
+    /*El padding es la separacion del margen con el texto dentro que se esta manipulando
+    dentro del margen*/
+    padding: 30px;
+    
+}
+
+/**Esto se le tiene que poner el signo '#' ya que es un id con el que
+estamos trabajando y son las modificaciones en general**/
+.footer .footer-content .formulario-content #formulario
+{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+/**Estas son las etiquetas del formulario **/
+.footer .footer-content .formulario-content #formulario label
+{
+    text-align: center;
+    color: var(--black);
+    font-size: 22px;
+    /*-el primer valor es el margen de arriba
+    -el segundo es margen para que se recorra a las izquiera
+    -el 3ro es el margen de abajo
+    -4to es el margen para que se recorra a la derecha*/
+    margin: 30px 0px 10px 0px;
+
+}
+/**Esta clase es para las modificaciones de los inputs
+los bordes, posicion tamaño etc**/
+.footer .footer-content .formulario-content #formulario input
+{
+    width: 90%;
+    height: 40px;
+    margin: auto;
+    border: 2px solid var(--red);
+    border-radius: 24px;
+    outline: none;
+    text-align: center;
+    /*Tamaño de letra dentro del input*/
+    font-size: 17px;
+    color: var(--black);
+}
+
+.footer .footer-content .formulario-content #formulario textarea
+{
+    width: 90%;
+    height: 200px;
+    margin: auto;
+    border: 2px solid var(--red);
+    border-radius: 24px;
+    outline: none;
+    /*Tamaño de letra dentro del input*/
+    font-size: 15px;
+    color: var(--black);
+    padding: 20px;
+
+}
+
+.footer .footer-content .formulario-content #formulario .send
+{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 40px 0px;
+}
+
+.footer .footer-content .formulario-content #formulario .send button
+{
+    /*Tamaño del boton hacia los lados*/
+    width: 150px;
+    /*Tamaño del boton hacia los arriba*/
+    height: 40px;
+    /*Color de alrededor de la palabra*/
+    background: var(--red);
+    /*El border radius es para saber que tan redondo queda el margen*/
+    border-radius: 24px;
+    border: none;
+    outline: none;
+    /*Tamaño de las letras*/
+    font-size: 20px;
+    /*Color de las letras*/
+    color: #fff;
+    text-align: center;
+    /*Separacion*/
+    margin-top: 20px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.footer .footer-content .formulario-content #formulario .send button:hover
+{
+    background: var(--blue);
+}
+
+.footer .footer-content .footer-text
+{
+    position: relative;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background: rgba(0, 0, 0, 0.8);
+    border-top: 5px solid #fff;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}  
+
+.footer .footer-content .footer-text p
+{
+    color: #fff;
+    font-size: 20px;
+}
+
+/**Media Query**/
+
+@media only screen and (max-width:900px)
+{
+    .bnt-menu > .fa-bars
+    {
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 30px;
+        font-size: 28px;
+        cursor: pointer;
+    }
+
+    .bnt-menu > .fa-bars:hover{color: var(--red);}
+    .bnt-menu > .fa-times{color: var(--red);}
+
+    .menu .list-container
+    {
+        position: absolute;
+        top: 60px;
+        /**Es para que se recorra para la izquierda, tanto que no se
+        vera**/
+        left: -100%;
+        width: 100%;
+        height: calc(100vh - 60px);
+        background: #fff;
+    }
+
+    .menu .list-container .lists
+    {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        border-top: 5px solid var(--red);
+    }
+
+    .menu .list-container .lists li
+    {
+        width: 90%;
+        margin: 10px 0px;
+        border-bottom: 1px solid var(--red);
+        text-align: center;
+
+    }
+
+    .menu .list-container .lists li a
+    {
+        font-size: 20px;
+    }
+
+    .menu .list-container .lists li a.activo
+    {
+        background: none;
+        color: var(--red);
+    }
+
+    .menu .list-container .lists li a.hover
+    {
+        background: none;
+        color: var(--red);
+    }
+}
+
+@media only screen and (max-width: 773px)
+{
+    /** IMG header **/
+    .img-header .Welcome h1
+    {
+        font-size: 40px;
+    }
+    .img-header .Welcome > button
+    {
+        width: 130px;
+        font-size: 20px;
+    }
+
+    .acerca-de .info-container .about-galery
+    {
+        flex-direction: column;
+    }
+    .acerca-de .info-container .about-galery img
+    {
+        width: 100%;
+    }
+
+    /** Nuestros proyectos **/
+
+    .our-projects .container-project .project-img img
+    {
+        width: 80%;
+        margin-top: 30px;
+    }
+
+}
+
+@media only screen and (max-width: 590px)
+{
+    .img-header .Welcome h1
+    {
+        font-size: 30px;
+    }
+    .img-header .Welcome hr
+    {
+        width: 100%;
+    }
+    .img-header .Welcome p
+    {
+        font-size: 17px;
+    }
+
+    .img-header .Welcome > button
+    {
+        width: 100px;
+        font-size: 17px;
+    }
+}
+
+@media only screen and (max-width: 890px)
+{
+    .Testimonio .box-testimonio .card-testimonio .card-img img
+    {
+        width: 200px;
+        height: 200px;
+    }
+    .Testimonio .box-testimonio .card-testimonio
+    {
+        width: 100%;
+    }
+    .Testimonio .box-testimonio .card-testimonio .testimonio-text h4
+    {
+        font-size: 25px;
+    }
+    .Testimonio .box-testimonio .card-testimonio .testimonio-text p
+    {
+        font-size: 17px;
+        line-height: 35px;
+    }
+}
+
+@media only screen and (max-width: 900px)
+{
+    .footer .formulario-content
+    {
+        width: 95%;
+        padding: 20px;
+    }
+    .footer .formulario-content #formulario input
+    {
+        width: 100%;
+    }
+    .footer .footer-content #formulario textarea
+    {
+        width: 100%;
+    }
+}
+
+
+

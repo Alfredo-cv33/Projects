@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"> 
+        <title>Formulario De Registro</title>
+        <link rel="stylesheet" type="text/css" href="style-login.css">
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap" rel="stylesheet">    
+    </head>
+    <body>
+
+
+        <header id = "header">
+            <nav class="menu">
+        
+                <div class="logo-box">
+                    <h1><a href="#">Sambijoux</a></h1>
+                    <span class="bnt-menu"><i class="fas fa-bars"></i></span>
+                </div>
+        
+                <!-- Menu de opciones -->
+                <div class="list-container">
+                    <ul class="lists">
+                        <li><a href="Index.html" class="activo"><b>Inicio</b></a></li>
+                        <li><a href="#"><b>Productos</b></a>
+                            <ul class="Subproductos">
+                                <li><a href="Anillos.html">Anillos</a></li>
+                                <li><a href="Collares.html">Collares</a></li>
+                                <li><a href="Kits.html">Kits</a></li>
+                                <li><a href="Coleccion.html">Colección</a></li>
+                                <li><a href="Venta-material.html">Venta de material</a></li>
+                                <li><a href="Dijes.html">Dijes</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="login.html"><i class="fas fa-sign-in-alt"></i></a></li>
+                        <li><a href="carrito-compras.html"><i class="fas fa-shopping-cart"></i></a></li>
+                    </ul>
+                </div>
+        
+            </nav>
+            <div class="Titulo">
+                <h2 class="titulo">
+                    Login
+                </h2>
+            </div>
+        </header>  
+
+
+	<div class="contenedor">
+		<form action="#" class="formulario" id="formulario" name="formulario" method="POST">
+			<div class="contenedor-inputs">
+				<input type="email" name="nombre" placeholder="Correo electronico" required>
+				<input type="password" name="correo" placeholder="Contraseña" required>
+
+				<ul class="error" id="error"></ul>
+            </div>
+            
+            <div class="registro">
+                <h3>
+                    ¿No tienes cuenta? Registrate gratis
+                </h3>
+            </div>
+
+			<input type="submit" class="btn" name="login" value="INGRESAR">
+		</form>
+	</div>
+    <script src="formulario.js"></script>
+    <script src="https://kit.fontawesome.com/f8edc8bda4.js" crossorigin="anonymous"></script>
+</body>
+</html>
